@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
-  Dimensions,
   Text,
   View,
   SafeAreaView,
@@ -11,7 +10,9 @@ import {
 import SearchBar from "./components/SearchBar";
 import StatBlock from "./components/StatBlock";
 import Button from "./components/Button";
+import FollowButton from "./components/FollowButton"
 export default function App() {
+  
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.searchContainer}>
@@ -19,7 +20,7 @@ export default function App() {
           style={styles.backImg}
           source={require("./assets/back.png")}
         ></Image>
-          <SearchBar></SearchBar>
+        <SearchBar></SearchBar>
         <Image
           style={styles.settingImg}
           source={require("./assets/setting.png")}
@@ -46,7 +47,7 @@ export default function App() {
 
       <View style={styles.buttonContainer}>
         <Button title="Edit Profile"></Button>
-        <Button title="Follow"></Button>
+        <FollowButton></FollowButton>
       </View>
 
       <View style={styles.galleryContainer}>
